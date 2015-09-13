@@ -5,7 +5,7 @@
  */
 
 package domain;
-import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Payment
 {
     private String invoiceNumber;
     private String paymentMethod;
-    private SimpleDateFormat Date = new SimpleDateFormat("dd-MMM-yyyy");
+    private Date paymentDate;
     
     private Payment(){}
     
@@ -23,14 +23,14 @@ public class Payment
     {
         invoiceNumber = builder.invoiceNumber;
         paymentMethod = builder.paymentMethod;
-        Date = builder.Date;
+        paymentDate = builder.paymentDate;
     }
     
     public static class Builder
     {
         private String invoiceNumber;
         private String paymentMethod;
-        private SimpleDateFormat Date = new SimpleDateFormat("dd-MMM-yyyy");
+        private Date paymentDate;
         
         public Builder(String invoiceNumber)
         {
@@ -43,9 +43,9 @@ public class Payment
             return this;
         }
         
-        public Builder Date(SimpleDateFormat value)
+        public Builder paymentDate(Date value)
         {
-            Date = value;
+            paymentDate = value;
             return this;
         }
         
@@ -63,8 +63,8 @@ public class Payment
         return paymentMethod;
     }
 
-    public SimpleDateFormat getDate() {
-        return Date;
+    public Date getPaymentDate() {
+        return paymentDate;
     }
     
     @Override

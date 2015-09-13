@@ -31,7 +31,7 @@ public class Driver
         private String driverName;
         private String contactNumber;
         
-        public Builder(String tutorID)
+        public Builder(String driverID)
         {
             this.driverID = driverID;
         }

@@ -13,10 +13,10 @@ import domain.Venue;
  */
 public class VenueFactory 
 {
-    public static Venue createVenue(String venueID, String venueName, String venueAddress)
+    public static Venue createVenue(String venueID, String venueName, String venueLocation)
     {
         Venue venue = new Venue.Builder(venueID).venueName(venueName)
-                          .venueAddress(venueAddress).build();
+                          .venueLocation(venueLocation).build();
         
         return venue;
     }    

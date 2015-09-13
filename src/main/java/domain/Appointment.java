@@ -5,7 +5,8 @@
  */
 
 package domain;
-import java.text.SimpleDateFormat;
+import java.util.Date;
+//import java.text.SimpleDateFormat;
 
 /**
  *
@@ -14,7 +15,7 @@ import java.text.SimpleDateFormat;
 public class Appointment 
 {
     private String appointmentID;
-    private SimpleDateFormat appointmentDate = new SimpleDateFormat("dd-MMM-yyyy");
+    private Date appointmentDate;
     private String appointmentType;
     private String studentID;
     private String tutorID;
@@ -47,7 +48,7 @@ public class Appointment
     public static class Builder
     {
         private String appointmentID;
-        private SimpleDateFormat appointmentDate = new SimpleDateFormat("dd-MMM-yyyy");
+        private Date appointmentDate;
         private String appointmentType;
         private String studentID;
         private String tutorID;
@@ -64,7 +65,7 @@ public class Appointment
             this.appointmentID = appointmentID;
         }
         
-        public Builder appointmentDate(SimpleDateFormat value)
+        public Builder appointmentDate(Date value)
         {
             appointmentDate = value;
             return this;
@@ -140,7 +141,7 @@ public class Appointment
         return appointmentID;
     }
 
-    public SimpleDateFormat getAppointmentDate() {
+    public Date getAppointmentDate() {
         return appointmentDate;
     }
 

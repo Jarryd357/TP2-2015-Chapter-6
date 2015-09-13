@@ -6,7 +6,7 @@
 
 package factory;
 import domain.Payment;
-import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -14,10 +14,10 @@ import java.text.SimpleDateFormat;
  */
 public class PaymentFactory 
 {
-    public static Payment createPayment(String invoiceNumber, String paymentMethod, SimpleDateFormat Date)
+    public static Payment createPayment(String invoiceNumber, String paymentMethod, Date paymentDate)
     {
         Payment payment = new Payment.Builder(invoiceNumber).paymentMethod(paymentMethod)
-                          .Date(Date).build();
+                          .paymentDate(paymentDate).build();
         
         return payment;
     }    

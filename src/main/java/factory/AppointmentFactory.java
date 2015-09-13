@@ -6,7 +6,8 @@
 
 package factory;
 import domain.Appointment;
-import java.text.SimpleDateFormat;
+import java.util.Date;
+//import java.text.SimpleDateFormat;
 
 /**
  *
@@ -14,11 +15,11 @@ import java.text.SimpleDateFormat;
  */
 public class AppointmentFactory 
 {
-    public static Appointment createAppointment(String appointmentID, SimpleDateFormat appointmentDate, String appointmentType, String studentID,
+    public static Appointment createAppointment(String appointmentID, Date appointmentDate, String appointmentType, String studentID,
        String tutorID, String invigilatorID, String driverID, String venueID, String invoiceNumber, String subjectCode, String sessionID, String examID)
     {
         Appointment appointment = new Appointment.Builder(appointmentID).appointmentDate(appointmentDate)
-                          .appointmentType(appointmentType).studentID(studentID).tutorID(tutorID).invigilatorID(invigilatorID).driverID(driverID).invoiceNumber(invoiceNumber).
+                          .appointmentType(appointmentType).studentID(studentID).tutorID(tutorID).invigilatorID(invigilatorID).driverID(driverID).venueID(venueID).invoiceNumber(invoiceNumber).
                             subjectCode(subjectCode).sessionID(sessionID).examID(examID).build();
         
         return appointment;

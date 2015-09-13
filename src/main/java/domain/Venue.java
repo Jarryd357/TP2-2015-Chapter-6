@@ -14,7 +14,7 @@ public class Venue
 {
     private String venueID;
     private String venueName;
-    private String venueAddress;
+    private String venueLocation;
     
     private Venue(){}
     
@@ -22,14 +22,14 @@ public class Venue
     {
         venueID = builder.venueID;
         venueName = builder.venueName;
-        venueAddress = builder.venueAddress;
+        venueLocation = builder.venueLocation;
     }
     
     public static class Builder
     {
         private String venueID;
         private String venueName;
-        private String venueAddress;
+        private String venueLocation;
         
         public Builder(String venueID)
         {
@@ -42,9 +42,9 @@ public class Venue
             return this;
         }
         
-        public Builder venueAddress(String value)
+        public Builder venueLocation(String value)
         {
-            venueAddress = value;
+            venueLocation = value;
             return this;
         }
         
@@ -62,8 +62,8 @@ public class Venue
         return venueName;
     }
 
-    public String getVenueAddress() {
-        return venueAddress;
+    public String getVenueLocation() {
+        return venueLocation;
     }
     
     @Override
